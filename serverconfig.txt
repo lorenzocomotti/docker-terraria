@@ -1,0 +1,8 @@
+world=/var/terraria-worlds/myworld.wld
+autocreate=2
+difficulty=1
+password=terraria
+motd="Welcome!"
+maxplayers=2
+worldname=myworld
+worldpath=/var/terraria-worlds

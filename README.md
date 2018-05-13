@@ -54,3 +54,37 @@ run the `server-start.sh` file
 ```
 bash server-start.sh
 ```
+## Access Server CLI
+
+The server is started with a `screen` session  
+You can access the server cli with the following command:
+
+```
+screen -x
+```
+
+# Container management
+
+#### Create the container
+
+```
+make create
+```
+
+#### Start the container:
+
+```
+make start
+```
+
+#### Stop the container
+
+```
+make stop
+```
+
+#### Remove the container
+
+```
+make remove
+```

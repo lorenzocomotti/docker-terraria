@@ -3,7 +3,7 @@
 This repository contains the Dockerfile and associated assets for building a Terraria server Docker image
 
 ## Requirements
-#### Istall docker
+#### Install docker
 
 Fedora / Centos
 ```

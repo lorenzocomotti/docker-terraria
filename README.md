@@ -42,13 +42,6 @@ You then run the container with Makefile present in the project:
 make create
 ```
 
-## Start server 
-enter the container:
-
-```
-docker exec -it terraria-server /bin/bash
-```
-
 ## Access Server CLI
 
 The server is started with a `screen` session  

@@ -7,13 +7,13 @@ This repository contains the Dockerfile and associated assets for building a Ter
 
 Fedora / Centos
 ```
-yum install -y docker
+yum install -y docker.io
 ```
 
 Ubuntu / Debian
 
 ```
-apt-get -y install docker
+apt-get -y install docker.io
 ```
 
 #### Start the service:
@@ -49,11 +49,6 @@ enter the container:
 docker exec -it terraria-server /bin/bash
 ```
 
-run the `server-start.sh` file
-
-```
-bash server-start.sh
-```
 ## Access Server CLI
 
 The server is started with a `screen` session  

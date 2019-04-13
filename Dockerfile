@@ -39,6 +39,6 @@ VOLUME [ "/var/terraria-worlds/" ]
 
 WORKDIR "/opt/terraria/Linux"
 
-ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT [ "/opt/terraria/Linux/server-start.sh" ]
 
 EXPOSE 7777

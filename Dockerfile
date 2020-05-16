@@ -14,7 +14,7 @@ RUN apt update && apt -y upgrade && apt -y install unzip wget
 RUN cd /opt && wget https://terraria.org/server/terraria-server-1401.zip -O /opt/terraria-server-1401.zip
 
 ##Extract the archive
-RUN mkdir -p /opt/terraria && unzip -o /opt/terraria-server-1401.zip -d /opt/terraria && mv -vn /opt/terraria/1401/* /opt/terraria/ && rm -R -f /opt/1401 && rm /opt/terraria-server-1353.zip
+RUN mkdir -p /opt/terraria && unzip -o /opt/terraria-server-1401.zip -d /opt/terraria && mv -vn /opt/terraria/1401/* /opt/terraria/ && rm -R -f /opt/1401 && rm /opt/terraria-server-1401.zip
 
 ##Copy start script
 COPY server-start.sh ${TERRARIA_CONF}

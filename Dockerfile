@@ -1,41 +1,24 @@
-##Download base image ubuntu Centos 7
-FROM centos:7
+##Download base image Ubuntu
+FROM ubuntu:focal
 
 MAINTAINER Lorenzo Comotti
 
 ##Define the ENV variable
-ENV TERRARIA_VERSION=1.3.5.3
+ENV TERRARIA_VERSION=1.4.0.1
 ENV TERRARIA_CONF /opt/terraria/Linux/
 
-##Update Software repository
-RUN yum -y update
-
-##Install required pakages
-RUN yum -y install wget && yum -y install unzip && yum -y install screen
+##Update Software repository and install required pakages
+RUN apt update && apt -y upgrade && apt -y install unzip wget
 
 ##Download Terraria Server
-RUN cd /opt && curl -O http://terraria.org/server/terraria-server-1353.zip
+RUN cd /opt && wget https://terraria.org/server/terraria-server-1401.zip -O /opt/terraria-server-1401.zip
 
 ##Extract the archive
-RUN mkdir -p /opt/terraria && unzip -o /opt/terraria-server-1353.zip -d /opt/terraria && mv -vn /opt/terraria/1353/* /opt/terraria/ && rm -R -f /opt/1353
+RUN mkdir -p /opt/terraria && unzip -o /opt/terraria-server-1401.zip -d /opt/terraria && mv -vn /opt/terraria/1401/* /opt/terraria/ && rm -R -f /opt/1401 && rm /opt/terraria-server-1353.zip
 
-##Set permission
-RUN chown -R root:root /opt/terraria && chmod +x /opt/terraria/Linux/TerrariaServer.bin.x86_64
-
-##Create user
-RUN id -u terraria &>/dev/null || useradd -r -m -d /srv/terraria terraria
-
-##Remove ZIP file
-RUN rm /opt/terraria-server-1353.zip
-
-##Copy coinfiguration File
-COPY serverconfig.txt ${TERRARIA_CONF}
+##Copy start script
 COPY server-start.sh ${TERRARIA_CONF}
-
 RUN chmod +x ${TERRARIA_CONF}server-start.sh 
-
-##Volume configuration
-VOLUME [ "/var/terraria-worlds/" ]
 
 WORKDIR "/opt/terraria/Linux"
 

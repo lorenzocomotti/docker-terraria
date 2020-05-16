@@ -1,6 +1,6 @@
 # Terraria Server in Docker
 
-This repository contains the Dockerfile and associated assets for building a Terraria server Docker image
+This repository contains the Dockerfile and associated assets for building a Terraria server 1.4.0.1 Docker image
 
 ## Requirements
 #### Install docker
@@ -33,46 +33,6 @@ mkdir /data
 edit the `serverconfig.txt` file to customize server configuration   
 In this link you can find the official documentation: [https://terraria.gamepedia.com/Server](https://terraria.gamepedia.com/Server)
 
+## Mount Configuration
 
-## Run the Container
-
-You then run the container with Makefile present in the project:
-
-```
-make create
-```
-
-## Access Server CLI
-
-The server is started with a `screen` session  
-You can access the server cli with the following command:
-
-```
-screen -x
-```
-
-# Container management
-
-#### Create the container
-
-```
-make create
-```
-
-#### Start the container:
-
-```
-make start
-```
-
-#### Stop the container
-
-```
-make stop
-```
-
-#### Remove the container
-
-```
-make remove
-```
+Mount configuration in container like configmap (kubernetes) or Volume (Docker only)

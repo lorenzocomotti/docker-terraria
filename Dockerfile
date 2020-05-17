@@ -11,7 +11,7 @@ ENV TERRARIA_CONF /opt/terraria/Linux/
 RUN apt update && apt -y upgrade && apt -y install unzip wget
 
 ##Download Terraria Server
-RUN cd /opt && wget https://terraria.org/server/terraria-server-1402.zip -O /opt/terraria-server-1402.zip
+RUN cd /opt && wget https://terraria.org/system/dedicated_servers/archives/000/000/036/original/terraria-server-1402.zip?1589675482 -O /opt/terraria-server-1402.zip
 
 ##Extract the archive
 RUN mkdir -p /opt/terraria && unzip -o /opt/terraria-server-1402.zip -d /opt/terraria && mv -vn /opt/terraria/1402/* /opt/terraria/ && rm -R -f /opt/1402 && rm /opt/terraria-server-1402.zip

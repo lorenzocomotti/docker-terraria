@@ -18,7 +18,7 @@ RUN mkdir -p /opt/terraria && unzip -o /opt/terraria-server-1402.zip -d /opt/ter
 
 ##Copy start script
 COPY server-start.sh ${TERRARIA_CONF}
-RUN chmod +x ${TERRARIA_CONF}server-start.sh 
+RUN chmod +x ${TERRARIA_CONF}server-start.sh && chmod +x  ${TERRARIA_CONF}TerrariaServer.bin.x86*
 
 WORKDIR "/opt/terraria/Linux"
 

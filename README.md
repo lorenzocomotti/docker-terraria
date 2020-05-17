@@ -1,6 +1,6 @@
 # Terraria Server in Docker
 
-This repository contains the Dockerfile and associated assets for building a Terraria server 1.4.0.2 Docker image
+This repository contains the Dockerfile and associated assets for building a Terraria server 1.4.0.1 Docker image
 
 ## Requirements
 #### Install docker
@@ -31,5 +31,5 @@ In this link you can find the official documentation: [https://terraria.gamepedi
 ## Start your docker container
 
 ```
-sudo docker run -it -p 7777:7777 -v $HOME/terraria/worlds:/opt/terraria/worlds -v $HOME/terraria/configurations/serverconfig.txt:/opt/terraria/serverconfig.txt --name="terraria" lorenzocomotti/terraria:latest
+sudo docker run -it -p 7777:7777 -v $HOME/terraria/worlds:/opt/terraria/worlds -v $HOME/terraria/configurations/serverconfig.txt:/opt/terraria/serverconfig.txt --name="terraria" lorenzocomotti/terraria:1.4.0.1
 ```

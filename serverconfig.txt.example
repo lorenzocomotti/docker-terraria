@@ -1,0 +1,15 @@
+###########################################################
+# EXAMPLE CONFIGURATION NOT USE FOR PRODUCTION ENVIROMENT #
+###########################################################
+
+maxplayers=10
+world=/opt/terraria/worlds/world1.wld
+port=7777
+password=MyPassword
+motd="Welcome!"
+worldpath=/opt/terraria/worlds
+autocreate=2
+difficulty=0
+worldname=world1
+banlist=banlist.txt
+language=en/US

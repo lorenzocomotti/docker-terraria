@@ -16,23 +16,20 @@ Ubuntu / Debian
 apt-get -y install docker.io
 ```
 
-#### Start the service:
+#### Create a directory for your world file, configuration, and logs
 
 ```
-systemctl start docker
-```
-
-#### Create directory which will hold the server world data:
-
-```
-mkdir /data
+mkdir -p $HOME/terraria/worlds
+mkdir -p $HOME/terraria/configurations
 ```
 
 ## Create config file
 
-edit the `serverconfig.txt` file to customize server configuration   
+Create or edit the `$HOME/terraria/configurations/serverconfig.txt` file to customize server configuration.
 In this link you can find the official documentation: [https://terraria.gamepedia.com/Server](https://terraria.gamepedia.com/Server)
 
-## Mount Configuration
+## Start your docker container
 
-Mount configuration in container like configmap (kubernetes) or Volume (Docker only)
+```
+sudo docker run -it -p 7777:7777 -v $HOME/terraria/worlds:/opt/terraria/worlds -v $HOME/terraria/configurations/serverconfig.txt:/opt/terraria/serverconfig.txt --name="terraria" lorenzocomotti/terraria:latest
+```

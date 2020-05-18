@@ -31,5 +31,5 @@ In this link you can find the official documentation: [https://terraria.gamepedi
 ## Start your docker container
 
 ```
-sudo docker run -it -p 7777:7777 -v $HOME/terraria/worlds:/opt/terraria/worlds -v $HOME/terraria/configurations/serverconfig.txt:/opt/terraria/serverconfig.txt --name="terraria" lorenzocomotti/terraria:1.4.0.1
+sudo docker run -it -p 7777:7777 -v $HOME/terraria/worlds:/opt/terraria/worlds -v $HOME/terraria/configurations/serverconfig.txt:/opt/terraria/serverconfig.txt --name="terraria" lorenzocomotti/docker-terraria:1.4.0.1
 ```

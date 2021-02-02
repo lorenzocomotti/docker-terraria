@@ -1,6 +1,6 @@
 # Terraria Server in Docker
 
-This repository contains the Dockerfile and associated assets for building a Terraria server 1.4.0.5 Docker image
+This repository contains the Dockerfile and associated assets for building a Terraria server 1.4.1.2 Docker image
 
 ## Requirements
 #### Install docker

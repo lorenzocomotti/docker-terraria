@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: "Build Container"
-          command: "docker build --tag lorenzocomotti/docker-terraria:latest"
+          command: "docker build --tag lorenzocomotti/docker-terraria:latest" /app
 
       - run: 
           name: "Push Image"

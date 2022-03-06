@@ -17,4 +17,6 @@ jobs:
 
       - run: 
           name: "Push Image"
-          command: "docker push lorenzocomotti/docker-terraria:latest"
+          command: |
+            docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+            docker push lorenzocomotti/docker-terraria:latest

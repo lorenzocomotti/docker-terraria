@@ -1,0 +1,15 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: /app
+    docker:
+      - image: docker:17.05.0-ce-git
+    steps:
+      - checkout
+      - run:
+          name: "Build Container"
+          command: "docker build --tag lorenzocomotti/docker-terraria:latest"
+
+      - run: 
+          name: "Push Image"
+          command: "docker push lorenzocomotti/docker-terraria:latest"

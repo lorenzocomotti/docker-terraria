@@ -13,10 +13,10 @@ jobs:
           version: 19.03.13
       - run:
           name: "Build Container"
-          command: "docker build --tag lorenzocomotti/docker-terraria:latest /app" 
+          command: "docker build --tag lorenzocomotti/docker-terraria:1.4.4.9 /app" 
 
       - run: 
           name: "Push Image"
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-            docker push lorenzocomotti/docker-terraria:latest
+            docker push lorenzocomotti/docker-terraria:1.4.4.9

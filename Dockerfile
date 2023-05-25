@@ -4,17 +4,17 @@ FROM ubuntu:focal
 MAINTAINER Lorenzo Comotti
 
 ##Define the ENV variable
-ENV TERRARIA_VERSION=1.4.3.2
+ENV TERRARIA_VERSION=1.4.4.9
 ENV TERRARIA_CONF /opt/terraria/Linux/
 
 ##Update Software repository and install required pakages
 RUN apt update && apt -y upgrade && apt -y install unzip wget
 
 ##Download Terraria Server
-RUN cd /opt && wget https://terraria.org/api/download/pc-dedicated-server/terraria-server-1432.zip -O /opt/terraria-server-1432.zip
+RUN cd /opt && wget https://terraria.org/api/download/pc-dedicated-server/terraria-server-1449.zip -O /opt/terraria-server-1449.zip
 
 ##Extract the archive
-RUN mkdir -p /opt/terraria && unzip -o /opt/terraria-server-1432.zip -d /opt/terraria && mv -vn /opt/terraria/1432/* /opt/terraria/ && rm -R -f /opt/1432 && rm /opt/terraria-server-1432.zip
+RUN mkdir -p /opt/terraria && unzip -o /opt/terraria-server-1449.zip -d /opt/terraria && mv -vn /opt/terraria/1449/* /opt/terraria/ && rm -R -f /opt/1449 && rm /opt/terraria-server-1449.zip
 
 ##Copy start script
 COPY server-start.sh ${TERRARIA_CONF}
